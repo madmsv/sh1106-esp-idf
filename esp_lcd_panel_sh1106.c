@@ -26,16 +26,15 @@
 // Set the maximum log level for this source file
 #define LOG_LOCAL_LEVEL ESP_LOG_DEBUG
 #endif
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_lcd_panel_interface.h"
-#include "esp_lcd_panel_io.h"
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+#include <esp_lcd_panel_interface.h>
+#include <esp_lcd_panel_io.h>
 #include "esp_lcd_panel_sh1106.h"
-#include "esp_lcd_panel_ops.h"
-#include "driver/gpio.h"
-#include "esp_log.h"
-#include "esp_check.h"
-#include "esp_compiler.h"
+#include <esp_lcd_panel_ops.h>
+#include <driver/gpio.h>
+#include <esp_log.h>
+#include <esp_check.h>
 
 static const char *TAG = "lcd_panel.sh1106";
 
