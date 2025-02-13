@@ -8,6 +8,30 @@ This driver is a simple implementation of the SH1106 OLED screen driver for the 
 
 It is used to communicate with the SH1106 OLED screen using the standard LCD interface of the ESP-IDF framework.
 
+## Installation
+
+To install the driver, you can clone the repository and place it in the `components` folder of your project.
+
+```bash
+git clone https://github.com/TNY-Robotics/sh1106-esp-idf.git components/sh1106
+```
+
+## Usage
+
+The driver exposes a simple header file named `esp_lcd_panel_sh1106.h`, that you can include using :
+
+```c
+#include "esp_lcd_panel_sh1106.h"
+```
+
+You can now create an lcd panel with the SH1106 driver using the following code :
+
+```c
+esp_err_t err = esp_lcd_new_panel_sh1106(panel_io_handle, &panel_dev_config, &panel_handle);
+```
+
+For more information about LCDs with the ESP-IDF framework, visit the [official documentation](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/lcd/index.html).
+
 ## Examples
 
 An example of how ESP-IDF lcd creation using the SH1106 driver can be found in the `main` folder.
