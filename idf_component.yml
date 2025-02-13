@@ -1,0 +1,25 @@
+version: 1.0.0
+targets:
+  - esp32
+  - esp32s2
+  - esp32s3
+  - esp32c3
+  - esp32c2
+  - esp32c6
+  - esp32h2
+  - esp32p4
+description: SH1106 ESP-IDF Driver by TNY-Robotics
+url: https://https://github.com/TNY-Robotics/sh1106-esp-idf
+repository: https://github.com/TNY-Robotics/sh1106-esp-idf.git
+issues: https://github.com/TNY-Robotics/sh1106-esp-idf/issues
+maintainers:
+  - "Tny-Robotics <contact@furwaz.com>"
+tags:
+  - sh1106
+  - display
+  - lcd
+  - oled
+  - i2c
+  - driver
+dependencies:
+  idf : ">=5.3"
