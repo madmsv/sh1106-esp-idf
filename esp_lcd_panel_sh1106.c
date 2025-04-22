@@ -224,15 +224,15 @@ static esp_err_t panel_sh1106_draw_bitmap(esp_lcd_panel_t *panel, int x_start, i
 static esp_err_t panel_sh1106_invert_color(esp_lcd_panel_t *panel, bool invert_color_data)
 {
     // NOTE : Cannot invert colors on the SH1106
-    // sh1106_panel_t *sh1106 = __containerof(panel, sh1106_panel_t, base);
-    // esp_lcd_panel_io_handle_t io = sh1106->io;
-    // int command = 0;
-    // if (invert_color_data) {
-    //     command = SH1106_CMD_INVERT_ON;
-    // } else {
-    //     command = SH1106_CMD_INVERT_OFF;
-    // }
-    // ESP_RETURN_ON_ERROR(esp_lcd_panel_io_tx_param(io, command, NULL, 0), TAG, "io tx param SH1106_CMD_INVERT_ON/OFF failed");
+    sh1106_panel_t *sh1106 = __containerof(panel, sh1106_panel_t, base);
+    esp_lcd_panel_io_handle_t io = sh1106->io;
+    int command = 0;
+    if (invert_color_data) {
+        command = SH1106_CMD_SET_DISPLAY_REVERSE;
+    } else {
+        command = SH1106_CMD_SET_DISPLAY_NORMAL;
+    }
+    ESP_RETURN_ON_ERROR(esp_lcd_panel_io_tx_param(io, command, NULL, 0), TAG, "io tx param SH1106_CMD_INVERT_ON/OFF failed");
     return ESP_OK;
 }
 
