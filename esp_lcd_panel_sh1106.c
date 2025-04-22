@@ -243,9 +243,9 @@ static esp_err_t panel_sh1106_mirror(esp_lcd_panel_t *panel, bool mirror_x, bool
 
     int command = 0;
     if (mirror_x) {
-        command = SH1106_CMD_SET_DISPLAY_REVERSE;
+        command = SH1106_CMD_SET_SEGMENT_REMAP_INVERSE;
     } else {
-        command = SH1106_CMD_SET_DISPLAY_NORMAL;
+        command = SH1106_CMD_SET_SEGMENT_REMAP_NORMAL;
     }
     ESP_RETURN_ON_ERROR(esp_lcd_panel_io_tx_param(io, command, NULL, 0), TAG, "io tx param SH1106_CMD_MIRROR_X_ON/OFF failed");
     if (mirror_y) {
