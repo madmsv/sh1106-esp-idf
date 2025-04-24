@@ -204,7 +204,7 @@ static esp_err_t panel_sh1106_init(esp_lcd_panel_t *panel)
 
     return ESP_OK;
 }
-
+pan
 static esp_err_t panel_sh1106_draw_bitmap(esp_lcd_panel_t *panel, int x_start, int y_start, int x_end, int y_end, const void *color_data)
 {
     sh1106_panel_t *sh1106 = __containerof(panel, sh1106_panel_t, base);
@@ -236,7 +236,7 @@ static esp_err_t panel_sh1106_invert_color(esp_lcd_panel_t *panel, bool invert_c
     return ESP_OK;
 }
 
-static esp_err_t panel_sh1106_mirror(esp_lcd_panel_t *panel, bool mirror_x, bool mirror_y)
+static esp_err_t el_sh1106_mirror(esp_lcd_panel_t *panel, bool mirror_x, bool mirror_y)
 {
     sh1106_panel_t *sh1106 = __containerof(panel, sh1106_panel_t, base);
     esp_lcd_panel_io_handle_t io = sh1106->io;
